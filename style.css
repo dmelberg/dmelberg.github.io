@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Design System Color Tokens */
+:root {
+    /* Grey colors */
+    --grey-0: #ffffff;
+    --grey-50: #fafafa;
+    --grey-100: #f5f5f5;
+    --grey-150: #f0f0f0;
+    --grey-200: #e5e5e5;
+    --grey-300: #d4d4d4;
+    --grey-400: #a3a3a3;
+    --grey-500: #737373;
+    --grey-600: #525252;
+    --grey-700: #404040;
+    --grey-800: #262626;
+    --grey-900: #171717;
+    --grey-1000: #000000;
+    
+    /* Blue colors */
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-800: #1e40af;
+    --blue-900: #1e3a8a;
+    
+    /* Mint/Green colors */
+    --mint-100: #ccfbf1;
+    --mint-200: #99f6e4;
+    --mint-400: #2dd4bf;
+    --mint-500: #14b8a6;
+    --mint-600: #0d9488;
+    --mint-700: #0f766e;
+    
+    /* Red colors */
+    --red-100: #fee2e2;
+    --red-200: #fecaca;
+    --red-400: #f87171;
+    --red-500: #ef4444;
+    --red-600: #dc2626;
+    --red-700: #b91c1c;
+    --red-900: #7f1d1d;
+    
+    /* Orange colors */
+    --orange-100: #ffedd5;
+    --orange-300: #fdba74;
+    --orange-400: #fb923c;
+    --orange-500: #f97316;
+    --orange-600: #ea580c;
+    --orange-700: #c2410c;
+    --orange-800: #9a3412;
+    --orange-900: #7c2d12;
+    
+    /* Yellow colors */
+    --yellow-100: #fef3c7;
+    --yellow-500: #eab308;
+    --yellow-700: #a16207;
+    --yellow-800: #854d0e;
+    
+    /* Purple colors */
+    --purple-100: #f3e8ff;
+    --purple-200: #e9d5ff;
+    --purple-500: #a855f7;
+    --purple-700: #7c3aed;
+    --purple-800: #6b21a8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--grey-0);
+    color: var(--grey-1000);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Header Banner */
+.header-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #ffd700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.banner-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fintoc-logo {
+    font-weight: 300;
+    color: #666;
+}
+
+.btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: #f5f5f5;
+}
+
+.btn-primary {
+    background: #000;
+    color: white;
+    border-color: #000;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: var(--grey-0);
+    border-right: 1px solid var(--grey-200);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.user-section {
+    padding: 20px;
+    border-bottom: 1px solid var(--grey-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-name {
+    font-weight: 500;
+    color: var(--grey-1000);
+}
+
+.nav-section {
+    padding: 20px 0;
+}
+
+.nav-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--grey-600);
+    text-transform: uppercase;
+    padding: 0 20px 10px;
+    letter-spacing: 0.5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: var(--grey-1000);
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: var(--grey-100);
+}
+
+.nav-item.active {
+    background: var(--blue-100);
+    color: var(--blue-600);
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 20px;
+    border-top: 1px solid var(--grey-200);
+}
+
+.test-mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.toggle-switch {
+    width: 40px;
+    height: 20px;
+    background: var(--mint-600);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--grey-0);
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s;
+}
+
+.bottom-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.chat-bubble {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--blue-600);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-0);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--grey-1000);
+    margin-bottom: 30px;
+}
+
+.balance-section {
+    background: var(--grey-100);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.balance-label {
+    font-size: 14px;
+    color: var(--grey-600);
+    margin-bottom: 8px;
+}
+
+.balance-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--mint-600);
+    margin-bottom: 8px;
+}
+
+.balance-info {
+    font-size: 12px;
+    color: var(--grey-500);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--grey-300);
+    background: var(--grey-0);
+    border-radius: 4px;
+    color: var(--grey-1000);
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    background: var(--grey-100);
+}
+
+/* Table */
+.table-container {
+    background: var(--grey-0);
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--grey-200);
+    background: var(--grey-100);
+}
+
+.table-title {
+    font-weight: 600;
+    color: var(--grey-1000);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--grey-1000);
+    border-bottom: 1px solid var(--grey-200);
+    background: var(--grey-100);
+}
+
+.table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--grey-150);
+}
+
+/* Align amount column to the right */
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    text-align: right;
+}
+
+.table tr:hover {
+    background: var(--grey-100);
+}
+
+.amount-positive {
+    color: var(--mint-600);
+    font-weight: 500;
+}
+
+.amount-negative {
+    color: var(--red-600);
+    font-weight: 500;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.status-rejected {
+    background: var(--yellow-100);
+    color: var(--yellow-700);
+}
+
+.status-returned {
+    background: var(--yellow-100);
+    color: var(--yellow-700);
+}
+
+/* Font Awesome Icons */
+.nav-icon i,
+.btn i,
+.bottom-icons i,
+.balance-info i,
+.filter-btn i,
+.table-header i,
+.status-badge i {
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-icons i {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.bottom-icons i:hover {
+    color: var(--blue-600);
+} 

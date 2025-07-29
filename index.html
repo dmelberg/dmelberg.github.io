@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfers UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="user-section">
+            <span class="user-name">Debbie Mx</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title">Transfers</div>
+            <div class="nav-item">
+                <span class="nav-icon"><i class="fas fa-layer-group"></i></span>
+                Accounts
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon"><i class="fas fa-bars"></i></span>
+                CLABES
+            </div>
+            <div class="nav-item active">
+                <span class="nav-icon"><i class="fas fa-exchange-alt"></i></span>
+                Transfers
+            </div>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title">Fintoc Collects</div>
+            <div class="nav-item">
+                <span class="nav-icon"><i class="fas fa-layer-group"></i></span>
+                Payouts
+            </div>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title">Payment Initiation</div>
+            <div class="nav-item">
+                <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
+                Analytics
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon"><i class="fas fa-camera"></i></span>
+                Payments
+            </div>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-title">For Developers</div>
+            <div class="nav-item">
+                <span class="nav-icon"><i class="fas fa-key"></i></span>
+                API Keys
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon"><i class="fas fa-link"></i></span>
+                Webhooks
+            </div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="test-mode">
+                <span>Live Mode</span>
+                <div class="toggle-switch"></div>
+            </div>
+            <div class="bottom-icons">
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-file-alt"></i>
+                <i class="fas fa-question-circle"></i>
+                <i class="fas fa-expand-arrows-alt"></i>
+                <div class="chat-bubble">1</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="page-title">Transfers</h1>
+
+        <div class="balance-section">
+            <div class="balance-label">Balance</div>
+            <div class="balance-amount">$ 0.00 MXN</div>
+            <div class="balance-info">
+                <span>Last updated 29 Jul 2025, 07:41</span>
+                <span>Time zone</span>
+                <i class="fas fa-flag"></i>
+            </div>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn">
+                Date
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="filter-btn">
+                Fintoc ID
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="filter-btn">
+                Amount
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="filter-btn">
+                Type
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="filter-btn">
+                Status
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="filter-btn">
+                Tracking key
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="filter-btn">
+                More filters
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header">
+                <span class="table-title">Transfers</span>
+                <i class="fas fa-cog"></i>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>FROM/TO</th>
+                        <th>CONCEPT</th>
+                        <th>AMOUNT MXN</th>
+                        <th>USER</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jul 28, 11:17:38</td>
+                        <td>Carson Runolfsson</td>
+                        <td>Shopping</td>
+                        <td>
+                            <span class="status-badge status-rejected">
+                                <i class="fas fa-undo"></i>
+                                Rejected
+                            </span>
+                            <span class="amount-positive">$ 10.00</span>
+                        </td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td>Jul 28, 10:45:22</td>
+                        <td>Scotty Wiegand</td>
+                        <td>probando</td>
+                        <td class="amount-positive">$ 100.00</td>
+                        <td>U10</td>
+                    </tr>
+                    <tr>
+                        <td>Jul 28, 09:32:15</td>
+                        <td>Adrianne Murray</td>
+                        <td>Exchange USDC</td>
+                        <td class="amount-positive">$ 200.00</td>
+                        <td>user_123</td>
+                    </tr>
+                    <tr>
+                        <td>Jul 28, 08:15:42</td>
+                        <td>Test_holder_name</td>
+                        <td>Transfer failed</td>
+                        <td class="amount-negative">- $ 10.00</td>
+                        <td>OHLM00157088</td>
+                    </tr>
+                    <tr>
+                        <td>Jul 28, 07:28:33</td>
+                        <td>Dede Kuhlman</td>
+                        <td>probanco</td>
+                        <td class="amount-negative">- $ 1.00</td>
+                        <td>U12</td>
+                    </tr>
+                    <tr>
+                        <td>Jul 28, 06:45:18</td>
+                        <td>Nakesha Breitenberg</td>
+                        <td>Pablo inversiones</td>
+                        <td>
+                            <span class="status-badge status-returned">
+                                <i class="fas fa-undo"></i>
+                                Returned
+                            </span>
+                            <span class="amount-positive">$ 3,045.00</span>
+                        </td>
+                        <td>U15</td>
+                    </tr>
+                    <tr>
+                        <td>Jul 28, 05:22:09</td>
+                        <td>Sammy Jerde</td>
+                        <td>--</td>
+                        <td class="amount-negative">- $ 1,000.00</td>
+                        <td>U18</td>
+                    </tr>
+                    <tr>
+                        <td>Jul 28, 04:18:55</td>
+                        <td>Hyun Mraz</td>
+                        <td>--</td>
+                        <td>
+                            <span class="status-badge status-returned">
+                                <i class="fas fa-undo"></i>
+                                Returned
+                            </span>
+                            <span class="amount-positive">$ 10.00</span>
+                        </td>
+                        <td>U20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation item click handlers
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                });
+            });
+
+            // Filter button click handlers
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Add visual feedback
+                    this.style.background = '#e3f2fd';
+                    setTimeout(() => {
+                        this.style.background = '';
+                    }, 200);
+                });
+            });
+
+            // Toggle switch functionality
+            const toggleSwitch = document.querySelector('.toggle-switch');
+            toggleSwitch.addEventListener('click', function() {
+                this.classList.toggle('active');
+                if (this.classList.contains('active')) {
+                    this.style.background = 'var(--orange-600)';
+                    this.style.setProperty('--toggle-position', 'right: 2px');
+                } else {
+                    this.style.background = 'var(--mint-600)';
+                    this.style.setProperty('--toggle-position', 'left: 2px');
+                }
+            });
+
+            // Table row hover effects
+            const tableRows = document.querySelectorAll('.table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#f8f9fa';
+                });
+                row.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+
+            // Header buttons functionality
+            const simulateBtn = document.querySelector('.btn:not(.btn-primary)');
+            const transferBtn = document.querySelector('.btn-primary');
+
+            simulateBtn.addEventListener('click', function() {
+                alert('Simulate functionality would be implemented here');
+            });
+
+            transferBtn.addEventListener('click', function() {
+                alert('Transfer functionality would be implemented here');
+            });
+
+            // Add smooth scrolling to main content
+            const mainContent = document.querySelector('.main-content');
+            mainContent.style.scrollBehavior = 'smooth';
+
+            // Add loading animation for balance
+            const balanceAmount = document.querySelector('.balance-amount');
+            balanceAmount.style.opacity = '0';
+            setTimeout(() => {
+                balanceAmount.style.transition = 'opacity 0.5s ease-in';
+                balanceAmount.style.opacity = '1';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
