@@ -81,147 +81,434 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <h1 class="page-title">Transfers</h1>
+        <!-- Transfers List View -->
+        <div id="transfers-list-view">
+            <h1 class="page-title">Transfers</h1>
 
-        <div class="balance-section">
-            <div class="balance-label">Balance</div>
-            <div class="balance-amount">$ 0.00 MXN</div>
-            <div class="balance-info">
-                <span>Last updated 29 Jul 2025, 07:41</span>
-                <span>Time zone</span>
-                <i class="fas fa-flag"></i>
+            <div class="balance-section">
+                <div class="balance-label">Balance</div>
+                <div class="balance-amount">$ 0.00 MXN</div>
+                <div class="balance-info">
+                    <span>Last updated 29 Jul 2025, 07:41</span>
+                    <span>Time zone</span>
+                    <i class="fas fa-flag"></i>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn">
+                    Date
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="filter-btn">
+                    Fintoc ID
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="filter-btn">
+                    Amount
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="filter-btn">
+                    Type
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="filter-btn">
+                    Status
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="filter-btn">
+                    Tracking key
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="filter-btn">
+                    More filters
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <span class="table-title">Transfers</span>
+                    <i class="fas fa-cog"></i>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>FROM/TO</th>
+                            <th>CONCEPT</th>
+                            <th>AMOUNT MXN</th>
+                            <th>USER</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="transfer-row" data-transfer-id="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
+                            <td>Jul 28, 11:17:38</td>
+                            <td>Carson Runolfsson</td>
+                            <td>Shopping</td>
+                            <td>
+                                <span class="status-badge status-rejected">
+                                    <i class="fas fa-undo"></i>
+                                    Rejected
+                                </span>
+                                <span class="amount-positive">$ 10.00</span>
+                            </td>
+                            <td>123</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="transfer-row" data-transfer-id="tr_2aBcDe4fgHIjkLmnOpQrStuvWxYz">
+                            <td>Jul 28, 10:45:22</td>
+                            <td>Scotty Wiegand</td>
+                            <td>probando</td>
+                            <td class="amount-positive">$ 100.00</td>
+                            <td>U10</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_2aBcDe4fgHIjkLmnOpQrStuvWxYz">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_2aBcDe4fgHIjkLmnOpQrStuvWxYz">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="transfer-row" data-transfer-id="tr_3cDeFg5hiJKlMnOpQrStUvWxYzAb">
+                            <td>Jul 28, 09:32:15</td>
+                            <td>Adrianne Murray</td>
+                            <td>Exchange USDC</td>
+                            <td class="amount-positive">$ 200.00</td>
+                            <td>user_123</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_3cDeFg5hiJKlMnOpQrStUvWxYzAb">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_3cDeFg5hiJKlMnOpQrStUvWxYzAb">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="transfer-row" data-transfer-id="tr_4dEfGh6ijKlmNoPqRsTuVwXyZaBc">
+                            <td>Jul 28, 08:15:42</td>
+                            <td>Test_holder_name</td>
+                            <td>Transfer failed</td>
+                            <td class="amount-negative">- $ 10.00</td>
+                            <td>OHLM00157088</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_4dEfGh6ijKlmNoPqRsTuVwXyZaBc">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_4dEfGh6ijKlmNoPqRsTuVwXyZaBc">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="transfer-row" data-transfer-id="tr_5eFgHi7jkLmnOpQrStUvWxYzAbCd">
+                            <td>Jul 28, 07:28:33</td>
+                            <td>Dede Kuhlman</td>
+                            <td>probanco</td>
+                            <td class="amount-negative">- $ 1.00</td>
+                            <td>U12</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_5eFgHi7jkLmnOpQrStUvWxYzAbCd">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_5eFgHi7jkLmnOpQrStUvWxYzAbCd">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="transfer-row" data-transfer-id="tr_6fGhIj8klMnoPqRsTuVwXyZaBcDe">
+                            <td>Jul 28, 06:45:18</td>
+                            <td>Nakesha Breitenberg</td>
+                            <td>Pablo inversiones</td>
+                            <td>
+                                <span class="status-badge status-returned">
+                                    <i class="fas fa-undo"></i>
+                                    Returned
+                                </span>
+                                <span class="amount-positive">$ 3,045.00</span>
+                            </td>
+                            <td>U15</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_6fGhIj8klMnoPqRsTuVwXyZaBcDe">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_6fGhIj8klMnoPqRsTuVwXyZaBcDe">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="transfer-row" data-transfer-id="tr_7gHiJk9lmNopQrStUvWxYzAbCdEf">
+                            <td>Jul 28, 05:22:09</td>
+                            <td>Sammy Jerde</td>
+                            <td>--</td>
+                            <td class="amount-negative">- $ 1,000.00</td>
+                            <td>U18</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_7gHiJk9lmNopQrStUvWxYzAbCdEf">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_7gHiJk9lmNopQrStUvWxYzAbCdEf">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="transfer-row" data-transfer-id="tr_8hIjKl0mnOpQrStUvWxYzAbCdEfG">
+                            <td>Jul 28, 04:18:55</td>
+                            <td>Hyun Mraz</td>
+                            <td>--</td>
+                            <td>
+                                <span class="status-badge status-returned">
+                                    <i class="fas fa-undo"></i>
+                                    Returned
+                                </span>
+                                <span class="amount-positive">$ 10.00</span>
+                            </td>
+                            <td>U20</td>
+                            <td>
+                                <div class="row-actions">
+                                    <button class="action-btn" data-transfer-id="tr_8hIjKl0mnOpQrStUvWxYzAbCdEfG">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="action-menu" data-transfer-id="tr_8hIjKl0mnOpQrStUvWxYzAbCdEfG">
+                                        <div class="menu-item" data-action="return-transfer">
+                                            <i class="fas fa-undo"></i>
+                                            Return transfer
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <div class="filter-bar">
-            <button class="filter-btn">
-                Date
-                <i class="fas fa-plus"></i>
-            </button>
-            <button class="filter-btn">
-                Fintoc ID
-                <i class="fas fa-plus"></i>
-            </button>
-            <button class="filter-btn">
-                Amount
-                <i class="fas fa-plus"></i>
-            </button>
-            <button class="filter-btn">
-                Type
-                <i class="fas fa-plus"></i>
-            </button>
-            <button class="filter-btn">
-                Status
-                <i class="fas fa-plus"></i>
-            </button>
-            <button class="filter-btn">
-                Tracking key
-                <i class="fas fa-plus"></i>
-            </button>
-            <button class="filter-btn">
-                More filters
-                <i class="fas fa-plus"></i>
-            </button>
-        </div>
-
-        <div class="table-container">
-            <div class="table-header">
-                <span class="table-title">Transfers</span>
-                <i class="fas fa-cog"></i>
+        <!-- Transfer Detail View -->
+        <div id="transfer-detail-view" style="display: none;">
+            <div class="detail-header">
+                <div class="detail-nav">
+                    <a href="#" class="back-link">
+                        <i class="fas fa-chevron-left"></i>
+                        See all transfers
+                    </a>
+                    <span class="fintoc-logo">fintoc</span>
+                </div>
+                <div class="transfer-id">
+                    <span>Fintoc ID: tr_30VqOs1btBHcwJsru5XW3Woe5GK</span>
+                    <button class="copy-btn" data-clipboard-text="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
             </div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>DATE</th>
-                        <th>FROM/TO</th>
-                        <th>CONCEPT</th>
-                        <th>AMOUNT MXN</th>
-                        <th>USER</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jul 28, 11:17:38</td>
-                        <td>Carson Runolfsson</td>
-                        <td>Shopping</td>
-                        <td>
-                            <span class="status-badge status-rejected">
-                                <i class="fas fa-undo"></i>
-                                Rejected
+
+            <div class="transfer-summary">
+                <h1 class="transfer-title">Inbound transfer</h1>
+                <div class="transfer-amount-section">
+                    <span class="transfer-amount">$ 10.00 MXN</span>
+                    <span class="status-badge status-rejected">
+                        <i class="fas fa-undo"></i>
+                        Rejected
+                    </span>
+                </div>
+                <div class="transfer-timestamp">Created at 28 Jul 2025 - 13:17</div>
+            </div>
+
+            <div class="transfer-details-grid">
+                <div class="from-to-section">
+                    <div class="from-section">
+                        <h3>From</h3>
+                        <div class="account-card">
+                            <div class="account-name">Carson Runolfsson</div>
+                            <div class="account-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">RFC/CURP:</span>
+                                    <span class="detail-value">
+                                        JNDD471123XJ4
+                                        <button class="copy-btn" data-clipboard-text="JNDD471123XJ4">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Institution:</span>
+                                    <span class="detail-value">Cuenca</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">CLABE:</span>
+                                    <span class="detail-value">
+                                        723969738291465733
+                                        <button class="copy-btn" data-clipboard-text="723969738291465733">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transfer-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+
+                    <div class="to-section">
+                        <h3>To</h3>
+                        <div class="account-card">
+                            <div class="account-name">Deborah Elberg Mx</div>
+                            <div class="account-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">RFC/CURP:</span>
+                                    <span class="detail-value">--</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Institution:</span>
+                                    <span class="detail-value">Fintoc</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Account:</span>
+                                    <span class="detail-value">
+                                        <a href="#" class="link">See details ></a>
+                                    </span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">CLABE:</span>
+                                    <span class="detail-value">
+                                        735969000000200766
+                                        <button class="copy-btn" data-clipboard-text="735969000000200766">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details-timeline-grid">
+                    <div class="details-section">
+                        <h3>Details</h3>
+                        <div class="details-card">
+                            <div class="detail-row">
+                                <span class="detail-label">Fintoc ID:</span>
+                                <span class="detail-value">
+                                    tr_30VqOs1btBHcwJsru5XW3Woe5GK
+                                    <button class="copy-btn" data-clipboard-text="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Tracking key:</span>
+                                <span class="detail-value">
+                                    202507289073500000000000000013
+                                    <button class="copy-btn" data-clipboard-text="202507289073500000000000000013">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Reference Number:</span>
+                                <span class="detail-value">
+                                    13
+                                    <button class="copy-btn" data-clipboard-text="13">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-section">
+                        <h3>Timeline</h3>
+                        <div class="timeline-card">
+                            <div class="timeline-item">
+                                <i class="fas fa-undo timeline-icon"></i>
+                                <div class="timeline-content">
+                                    <div class="timeline-text">Transfer was rejected</div>
+                                    <div class="timeline-date">28 Jul 2025 - 13:17</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metadata-section">
+                    <h3>Metadata</h3>
+                    <div class="metadata-card">
+                        <div class="detail-row">
+                            <span class="detail-label">User:</span>
+                            <span class="detail-value">
+                                123
+                                <button class="copy-btn" data-clipboard-text="123">
+                                    <i class="fas fa-copy"></i>
+                                </button>
                             </span>
-                            <span class="amount-positive">$ 10.00</span>
-                        </td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>Jul 28, 10:45:22</td>
-                        <td>Scotty Wiegand</td>
-                        <td>probando</td>
-                        <td class="amount-positive">$ 100.00</td>
-                        <td>U10</td>
-                    </tr>
-                    <tr>
-                        <td>Jul 28, 09:32:15</td>
-                        <td>Adrianne Murray</td>
-                        <td>Exchange USDC</td>
-                        <td class="amount-positive">$ 200.00</td>
-                        <td>user_123</td>
-                    </tr>
-                    <tr>
-                        <td>Jul 28, 08:15:42</td>
-                        <td>Test_holder_name</td>
-                        <td>Transfer failed</td>
-                        <td class="amount-negative">- $ 10.00</td>
-                        <td>OHLM00157088</td>
-                    </tr>
-                    <tr>
-                        <td>Jul 28, 07:28:33</td>
-                        <td>Dede Kuhlman</td>
-                        <td>probanco</td>
-                        <td class="amount-negative">- $ 1.00</td>
-                        <td>U12</td>
-                    </tr>
-                    <tr>
-                        <td>Jul 28, 06:45:18</td>
-                        <td>Nakesha Breitenberg</td>
-                        <td>Pablo inversiones</td>
-                        <td>
-                            <span class="status-badge status-returned">
-                                <i class="fas fa-undo"></i>
-                                Returned
-                            </span>
-                            <span class="amount-positive">$ 3,045.00</span>
-                        </td>
-                        <td>U15</td>
-                    </tr>
-                    <tr>
-                        <td>Jul 28, 05:22:09</td>
-                        <td>Sammy Jerde</td>
-                        <td>--</td>
-                        <td class="amount-negative">- $ 1,000.00</td>
-                        <td>U18</td>
-                    </tr>
-                    <tr>
-                        <td>Jul 28, 04:18:55</td>
-                        <td>Hyun Mraz</td>
-                        <td>--</td>
-                        <td>
-                            <span class="status-badge status-returned">
-                                <i class="fas fa-undo"></i>
-                                Returned
-                            </span>
-                            <span class="amount-positive">$ 10.00</span>
-                        </td>
-                        <td>U20</td>
-                    </tr>
-                </tbody>
-            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
         // Interactive functionality
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing functionality...');
+            
+            // Test if elements exist
+            const testTransfersListView = document.getElementById('transfers-list-view');
+            const testTransferDetailView = document.getElementById('transfer-detail-view');
+            const testTableBody = document.querySelector('.table tbody');
+            const testTransferRows = document.querySelectorAll('.transfer-row');
+            
+            console.log('Elements found:', {
+                transfersListView: !!testTransfersListView,
+                transferDetailView: !!testTransferDetailView,
+                tableBody: !!testTableBody,
+                transferRows: testTransferRows.length
+            });
             // Navigation item click handlers
             const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => {
@@ -258,8 +545,8 @@
                 }
             });
 
-            // Table row hover effects
-            const tableRows = document.querySelectorAll('.table tbody tr');
+            // Table row hover effects (only for non-transfer rows)
+            const tableRows = document.querySelectorAll('.table tbody tr:not(.transfer-row)');
             tableRows.forEach(row => {
                 row.addEventListener('mouseenter', function() {
                     this.style.backgroundColor = '#f8f9fa';
@@ -269,30 +556,415 @@
                 });
             });
 
-            // Header buttons functionality
+            // Header buttons functionality (only if they exist)
             const simulateBtn = document.querySelector('.btn:not(.btn-primary)');
             const transferBtn = document.querySelector('.btn-primary');
 
-            simulateBtn.addEventListener('click', function() {
-                alert('Simulate functionality would be implemented here');
-            });
+            if (simulateBtn) {
+                simulateBtn.addEventListener('click', function() {
+                    alert('Simulate functionality would be implemented here');
+                });
+            }
 
-            transferBtn.addEventListener('click', function() {
-                alert('Transfer functionality would be implemented here');
-            });
+            if (transferBtn) {
+                transferBtn.addEventListener('click', function() {
+                    alert('Transfer functionality would be implemented here');
+                });
+            }
 
             // Add smooth scrolling to main content
             const mainContent = document.querySelector('.main-content');
-            mainContent.style.scrollBehavior = 'smooth';
+            if (mainContent) {
+                mainContent.style.scrollBehavior = 'smooth';
+            }
 
             // Add loading animation for balance
             const balanceAmount = document.querySelector('.balance-amount');
-            balanceAmount.style.opacity = '0';
-            setTimeout(() => {
-                balanceAmount.style.transition = 'opacity 0.5s ease-in';
-                balanceAmount.style.opacity = '1';
-            }, 300);
+            if (balanceAmount) {
+                balanceAmount.style.opacity = '0';
+                setTimeout(() => {
+                    balanceAmount.style.transition = 'opacity 0.5s ease-in';
+                    balanceAmount.style.opacity = '1';
+                }, 300);
+            }
+
+            // Transfer detail view functionality
+            const transfersListView = document.getElementById('transfers-list-view');
+            const transferDetailView = document.getElementById('transfer-detail-view');
+            const backLink = document.querySelector('.back-link');
+
+            // Use event delegation for better reliability
+            const tableBody = document.querySelector('.table tbody');
+            if (tableBody) {
+                console.log('Adding click listener to table body');
+                tableBody.addEventListener('click', function(e) {
+                    console.log('Table body clicked, target:', e.target);
+                    
+                    // Check if click is on action button or menu - if so, don't show transfer details
+                    if (e.target.closest('.row-actions')) {
+                        console.log('Click on row actions - not showing transfer details');
+                        return;
+                    }
+                    
+                    // Check if we just closed a menu - if so, don't show transfer details
+                    if (e.target.closest('.action-menu')) {
+                        console.log('Click on action menu - not showing transfer details');
+                        return;
+                    }
+                    
+                    // Check if menu was just closed - if so, don't show transfer details
+                    if (menuJustClosed) {
+                        console.log('Menu just closed - not showing transfer details');
+                        return;
+                    }
+                    
+                    const row = e.target.closest('.transfer-row');
+                    console.log('Closest transfer row:', row);
+                    if (row) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const transferId = row.getAttribute('data-transfer-id');
+                        console.log('Transfer row clicked:', transferId);
+                        showTransferDetail(transferId);
+                    }
+                });
+            } else {
+                console.error('Table body not found!');
+            }
+
+            // Back to transfers list
+            if (backLink) {
+                backLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showTransfersList();
+                });
+            }
+
+            // Copy functionality
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            copyButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-clipboard-text');
+                    copyToClipboard(textToCopy);
+                    
+                    // Visual feedback
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i>';
+                    this.style.color = 'var(--mint-600)';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.style.color = '';
+                    }, 2000);
+                });
+            });
+
+            function showTransferDetail(transferId) {
+                transfersListView.style.display = 'none';
+                transferDetailView.style.display = 'block';
+                
+                // Update transfer ID in detail view
+                const transferIdElements = transferDetailView.querySelectorAll('[data-clipboard-text]');
+                transferIdElements.forEach(element => {
+                    if (element.getAttribute('data-clipboard-text') === transferId) {
+                        const parentSpan = element.closest('.transfer-id span');
+                        if (parentSpan) {
+                            parentSpan.textContent = `Fintoc ID: ${transferId}`;
+                        }
+                    }
+                });
+            }
+
+            function showTransfersList() {
+                transferDetailView.style.display = 'none';
+                transfersListView.style.display = 'block';
+            }
+
+            function copyToClipboard(text) {
+                if (navigator.clipboard && window.isSecureContext) {
+                    // Use the modern clipboard API
+                    navigator.clipboard.writeText(text).then(() => {
+                        console.log('Text copied successfully');
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        fallbackCopyToClipboard(text);
+                    });
+                } else {
+                    // Fallback for older browsers
+                    fallbackCopyToClipboard(text);
+                }
+            }
+
+            function fallbackCopyToClipboard(text) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                try {
+                    document.execCommand('copy');
+                    console.log('Text copied successfully (fallback)');
+                } catch (err) {
+                    console.error('Failed to copy text (fallback): ', err);
+                }
+                
+                document.body.removeChild(textArea);
+            }
+
+            // Row Actions Functionality
+            let currentTransferId = null;
+            let menuJustClosed = false;
+
+            // Action button click handlers
+            document.addEventListener('click', function(e) {
+                const actionBtn = e.target.closest('.action-btn');
+                if (actionBtn) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Action button clicked');
+                    
+                    // Close any open menus and remove has-open-menu class
+                    document.querySelectorAll('.action-menu.show').forEach(menu => {
+                        menu.classList.remove('show');
+                        const row = menu.closest('.transfer-row');
+                        if (row) {
+                            row.classList.remove('has-open-menu');
+                        }
+                    });
+                    
+                    // Remove menu-open class from body
+                    document.body.classList.remove('menu-open');
+                    
+                    // Toggle current menu
+                    const menu = actionBtn.nextElementSibling;
+                    if (menu && menu.classList.contains('action-menu')) {
+                        const isOpen = menu.classList.contains('show');
+                        if (!isOpen) {
+                            // Add has-open-menu class to the row
+                            const row = actionBtn.closest('.transfer-row');
+                            if (row) {
+                                row.classList.add('has-open-menu');
+                            }
+                            
+                            // Add menu-open class to body
+                            document.body.classList.add('menu-open');
+                            
+                            // Position the menu relative to the button
+                            const buttonRect = actionBtn.getBoundingClientRect();
+                            menu.style.top = (buttonRect.bottom + 4) + 'px';
+                            menu.style.right = (window.innerWidth - buttonRect.right) + 'px';
+                        } else {
+                            // Remove has-open-menu class from the row
+                            const row = actionBtn.closest('.transfer-row');
+                            if (row) {
+                                row.classList.remove('has-open-menu');
+                            }
+                        }
+                        menu.classList.toggle('show');
+                    }
+                }
+                
+                // Menu item click handlers
+                const menuItem = e.target.closest('.menu-item');
+                if (menuItem) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const action = menuItem.getAttribute('data-action');
+                    const menu = menuItem.closest('.action-menu');
+                    const transferId = menu.getAttribute('data-transfer-id');
+                    
+                    if (action === 'return-transfer') {
+                        showMFAModal(transferId);
+                    }
+                    
+                    // Close menu and restore row clicking
+                    menu.classList.remove('show');
+                    const row = menu.closest('.transfer-row');
+                    if (row) {
+                        row.classList.remove('has-open-menu');
+                    }
+                    document.body.classList.remove('menu-open');
+                }
+                
+                // Close menus when clicking outside
+                if (!e.target.closest('.row-actions')) {
+                    const hadOpenMenus = document.querySelectorAll('.action-menu.show').length > 0;
+                    
+                    document.querySelectorAll('.action-menu.show').forEach(menu => {
+                        menu.classList.remove('show');
+                        const row = menu.closest('.transfer-row');
+                        if (row) {
+                            row.classList.remove('has-open-menu');
+                        }
+                    });
+                    
+                    // Remove menu-open class from body
+                    document.body.classList.remove('menu-open');
+                    
+                    // Set flag to prevent row click if we just closed a menu
+                    if (hadOpenMenus) {
+                        menuJustClosed = true;
+                        setTimeout(() => {
+                            menuJustClosed = false;
+                        }, 100);
+                    }
+                }
+            });
+
+            // MFA Modal functionality
+            const mfaModal = document.getElementById('mfa-modal');
+            const modalClose = document.getElementById('modal-close');
+            const modalCancel = document.getElementById('modal-cancel');
+            const modalConfirm = document.getElementById('modal-confirm');
+            const mfaInput = document.getElementById('mfa-code');
+
+            function showMFAModal(transferId) {
+                currentTransferId = transferId;
+                mfaModal.classList.add('show');
+                mfaInput.value = '';
+                mfaInput.focus();
+            }
+
+            function hideMFAModal() {
+                mfaModal.classList.remove('show');
+                currentTransferId = null;
+            }
+
+            if (modalClose) {
+                modalClose.addEventListener('click', hideMFAModal);
+            }
+
+            if (modalCancel) {
+                modalCancel.addEventListener('click', hideMFAModal);
+            }
+
+            if (modalConfirm) {
+                modalConfirm.addEventListener('click', function() {
+                    const mfaCode = mfaInput.value.trim();
+                    if (mfaCode.length === 6) {
+                        hideMFAModal();
+                        showNotification('warning', 'Transfer Return', `Transfer ${currentTransferId} return in progress`);
+                    } else {
+                        alert('Please enter a valid 6-digit MFA code');
+                    }
+                });
+            }
+
+            // Close modal on overlay click
+            if (mfaModal) {
+                mfaModal.addEventListener('click', function(e) {
+                    if (e.target === mfaModal) {
+                        hideMFAModal();
+                    }
+                });
+            }
+
+            // Close menu on scroll
+            function closeAllMenus() {
+                console.log('Closing all menus due to scroll');
+                const openMenus = document.querySelectorAll('.action-menu.show');
+                if (openMenus.length > 0) {
+                    openMenus.forEach(menu => {
+                        menu.classList.remove('show');
+                        const row = menu.closest('.transfer-row');
+                        if (row) {
+                            row.classList.remove('has-open-menu');
+                        }
+                    });
+                    
+                    // Remove menu-open class from body
+                    document.body.classList.remove('menu-open');
+                }
+            }
+
+            // Listen for scroll on window and main content
+            window.addEventListener('scroll', closeAllMenus, { passive: true });
+            
+            // Also listen for scroll on the main content area
+            const mainContentArea = document.querySelector('.main-content');
+            if (mainContentArea) {
+                mainContentArea.addEventListener('scroll', closeAllMenus, { passive: true });
+            }
+
+            // Notification system
+            function showNotification(type, title, message) {
+                const container = document.getElementById('notification-container');
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                
+                notification.innerHTML = `
+                    <div class="notification-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-title">${title}</div>
+                        <div class="notification-message">${message}</div>
+                    </div>
+                    <button class="notification-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                
+                container.appendChild(notification);
+                
+                // Show notification
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 100);
+                
+                // Auto-remove after 5 seconds
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                }, 5000);
+                
+                // Close button functionality
+                const closeBtn = notification.querySelector('.notification-close');
+                closeBtn.addEventListener('click', function() {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                });
+            }
         });
     </script>
+
+    <!-- MFA Modal -->
+    <div class="modal-overlay" id="mfa-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Multi-Factor Authentication</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <p>Please enter your MFA code to confirm the transfer return.</p>
+                <div class="form-group">
+                    <label class="form-label" for="mfa-code">MFA Code</label>
+                    <input type="text" id="mfa-code" class="form-input" placeholder="Enter 6-digit code" maxlength="6">
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-secondary" id="modal-cancel">Cancel</button>
+                <button class="btn-warning" id="modal-confirm">Confirm Return</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notification-container"></div>
 </body>
 </html>

@@ -340,6 +340,7 @@ body {
     border: 1px solid var(--grey-200);
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
 }
 
 .table-header {
@@ -381,8 +382,13 @@ body {
     text-align: right;
 }
 
-.table tr:hover {
+.table tr:hover:not(.has-open-menu) {
     background: var(--grey-100);
+}
+
+/* Disable all row hover when any menu is open */
+body.menu-open .table tr:hover {
+    background: transparent;
 }
 
 .amount-positive {
@@ -447,4 +453,595 @@ body {
 
 .bottom-icons i:hover {
     color: var(--blue-600);
+} 
+
+/* Transfer Detail View */
+#transfer-detail-view {
+    padding: 30px;
+}
+
+.detail-header {
+    margin-bottom: 30px;
+}
+
+.detail-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blue-600);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--blue-700);
+}
+
+.transfer-id {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--grey-600);
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--grey-500);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    background: var(--grey-100);
+    color: var(--grey-700);
+}
+
+.transfer-summary {
+    margin-bottom: 30px;
+}
+
+.transfer-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--grey-1000);
+    margin-bottom: 15px;
+}
+
+.transfer-amount-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.transfer-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--mint-600);
+}
+
+.transfer-timestamp {
+    font-size: 14px;
+    color: var(--grey-500);
+}
+
+.transfer-details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.from-to-section {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.from-section,
+.to-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.from-section h3,
+.to-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--grey-1000);
+    margin: 0;
+}
+
+.account-card {
+    background: var(--grey-100);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--grey-200);
+}
+
+.account-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--grey-1000);
+    margin-bottom: 15px;
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.transfer-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-400);
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.details-timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.details-section,
+.timeline-section,
+.metadata-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-section h3,
+.timeline-section h3,
+.metadata-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--grey-1000);
+    margin: 0;
+}
+
+.details-card,
+.timeline-card,
+.metadata-card {
+    background: var(--grey-100);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--grey-200);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--grey-150);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: var(--grey-600);
+    font-size: 14px;
+}
+
+.detail-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--grey-1000);
+    font-size: 14px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.link {
+    color: var(--blue-600);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link:hover {
+    color: var(--blue-700);
+    text-decoration: underline;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.timeline-icon {
+    color: var(--yellow-700);
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-text {
+    font-weight: 500;
+    color: var(--grey-1000);
+    margin-bottom: 4px;
+}
+
+.timeline-date {
+    font-size: 12px;
+    color: var(--grey-500);
+}
+
+/* Make table rows clickable */
+.transfer-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.transfer-row:hover {
+    background: var(--grey-100);
+}
+
+.transfer-row td {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .from-to-section {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .transfer-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+    
+    .details-timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .transfer-amount-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+} 
+
+/* Row Actions */
+.row-actions {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    padding: 4px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--grey-500);
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    position: relative;
+    z-index: 100002;
+    pointer-events: auto;
+}
+
+.action-btn:hover {
+    background: var(--grey-200) !important;
+    color: var(--grey-800) !important;
+    transform: scale(1.05);
+}
+
+
+
+.action-menu {
+    position: fixed;
+    background: var(--grey-0);
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 160px;
+    z-index: 100001;
+    display: none;
+    margin-top: 4px;
+}
+
+.action-menu.show {
+    display: block;
+}
+
+.menu-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--grey-1000);
+    transition: background-color 0.2s;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background: var(--grey-100);
+}
+
+.menu-item i {
+    font-size: 12px;
+    color: var(--grey-600);
+}
+
+/* MFA Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: var(--grey-0);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+.modal-overlay.show .modal {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--grey-1000);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--grey-500);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.modal-close:hover {
+    background: var(--grey-100);
+    color: var(--grey-700);
+}
+
+.modal-content {
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: var(--grey-600);
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    color: var(--grey-1000);
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--grey-300);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--blue-500);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.btn-secondary {
+    padding: 10px 16px;
+    border: 1px solid var(--grey-300);
+    background: var(--grey-0);
+    color: var(--grey-700);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: var(--grey-100);
+    border-color: var(--grey-400);
+}
+
+.btn-warning {
+    padding: 10px 16px;
+    border: 1px solid var(--orange-600);
+    background: var(--orange-600);
+    color: var(--grey-0);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-warning:hover {
+    background: var(--orange-700);
+    border-color: var(--orange-700);
+}
+
+
+
+/* Ensure action buttons are always clickable */
+.row-actions {
+    position: relative;
+    z-index: 100002;
+}
+
+/* When menu is open, block pointer events on table rows but allow action buttons */
+body.menu-open .table tbody tr {
+    pointer-events: none;
+}
+
+body.menu-open .table .row-actions {
+    pointer-events: auto;
+}
+
+/* Notification System */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3000;
+    max-width: 400px;
+}
+
+.notification {
+    background: var(--grey-0);
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 600;
+    color: var(--grey-1000);
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.notification-message {
+    color: var(--grey-600);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: var(--grey-500);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    background: var(--grey-100);
+    color: var(--grey-700);
+}
+
+.notification.warning {
+    border-left: 4px solid var(--orange-600);
+}
+
+.notification.warning .notification-icon {
+    background: var(--orange-100);
+    color: var(--orange-700);
 } 
