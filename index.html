@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transfers UI</title>
     <link rel="stylesheet" href="style.css">
+    <script src="mock-data.js"></script>
 </head>
 <body>
 
@@ -86,8 +87,17 @@
             <h1 class="page-title">Transfers</h1>
 
             <div class="balance-section">
-                <div class="balance-label">Balance</div>
-                <div class="balance-amount">$ 0.00 MXN</div>
+                <div class="balance-label">Last Month Summary</div>
+                <div class="balance-amounts">
+                    <div class="balance-item">
+                        <span class="balance-type">Inbound</span>
+                        <span class="balance-amount positive" id="total-inbound">$ 0.00 MXN</span>
+                    </div>
+                    <div class="balance-item">
+                        <span class="balance-type">Outbound</span>
+                        <span class="balance-amount negative" id="total-outbound">$ 0.00 MXN</span>
+                    </div>
+                </div>
                 <div class="balance-info">
                     <span>Last updated 29 Jul 2025, 07:41</span>
                     <span>Time zone</span>
@@ -142,185 +152,8 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="transfer-row" data-transfer-id="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
-                            <td>Jul 28, 11:17:38</td>
-                            <td>Carson Runolfsson</td>
-                            <td>Shopping</td>
-                            <td>
-                                <span class="status-badge status-rejected">
-                                    <i class="fas fa-undo"></i>
-                                    Rejected
-                                </span>
-                                <span class="amount-positive">$ 10.00</span>
-                            </td>
-                            <td>123</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="transfer-row" data-transfer-id="tr_2aBcDe4fgHIjkLmnOpQrStuvWxYz">
-                            <td>Jul 28, 10:45:22</td>
-                            <td>Scotty Wiegand</td>
-                            <td>probando</td>
-                            <td class="amount-positive">$ 100.00</td>
-                            <td>U10</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_2aBcDe4fgHIjkLmnOpQrStuvWxYz">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_2aBcDe4fgHIjkLmnOpQrStuvWxYz">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="transfer-row" data-transfer-id="tr_3cDeFg5hiJKlMnOpQrStUvWxYzAb">
-                            <td>Jul 28, 09:32:15</td>
-                            <td>Adrianne Murray</td>
-                            <td>Exchange USDC</td>
-                            <td class="amount-positive">$ 200.00</td>
-                            <td>user_123</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_3cDeFg5hiJKlMnOpQrStUvWxYzAb">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_3cDeFg5hiJKlMnOpQrStUvWxYzAb">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="transfer-row" data-transfer-id="tr_4dEfGh6ijKlmNoPqRsTuVwXyZaBc">
-                            <td>Jul 28, 08:15:42</td>
-                            <td>Test_holder_name</td>
-                            <td>Transfer failed</td>
-                            <td class="amount-negative">- $ 10.00</td>
-                            <td>OHLM00157088</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_4dEfGh6ijKlmNoPqRsTuVwXyZaBc">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_4dEfGh6ijKlmNoPqRsTuVwXyZaBc">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="transfer-row" data-transfer-id="tr_5eFgHi7jkLmnOpQrStUvWxYzAbCd">
-                            <td>Jul 28, 07:28:33</td>
-                            <td>Dede Kuhlman</td>
-                            <td>probanco</td>
-                            <td class="amount-negative">- $ 1.00</td>
-                            <td>U12</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_5eFgHi7jkLmnOpQrStUvWxYzAbCd">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_5eFgHi7jkLmnOpQrStUvWxYzAbCd">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="transfer-row" data-transfer-id="tr_6fGhIj8klMnoPqRsTuVwXyZaBcDe">
-                            <td>Jul 28, 06:45:18</td>
-                            <td>Nakesha Breitenberg</td>
-                            <td>Pablo inversiones</td>
-                            <td>
-                                <span class="status-badge status-returned">
-                                    <i class="fas fa-undo"></i>
-                                    Returned
-                                </span>
-                                <span class="amount-positive">$ 3,045.00</span>
-                            </td>
-                            <td>U15</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_6fGhIj8klMnoPqRsTuVwXyZaBcDe">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_6fGhIj8klMnoPqRsTuVwXyZaBcDe">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="transfer-row" data-transfer-id="tr_7gHiJk9lmNopQrStUvWxYzAbCdEf">
-                            <td>Jul 28, 05:22:09</td>
-                            <td>Sammy Jerde</td>
-                            <td>--</td>
-                            <td class="amount-negative">- $ 1,000.00</td>
-                            <td>U18</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_7gHiJk9lmNopQrStUvWxYzAbCdEf">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_7gHiJk9lmNopQrStUvWxYzAbCdEf">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="transfer-row" data-transfer-id="tr_8hIjKl0mnOpQrStUvWxYzAbCdEfG">
-                            <td>Jul 28, 04:18:55</td>
-                            <td>Hyun Mraz</td>
-                            <td>--</td>
-                            <td>
-                                <span class="status-badge status-returned">
-                                    <i class="fas fa-undo"></i>
-                                    Returned
-                                </span>
-                                <span class="amount-positive">$ 10.00</span>
-                            </td>
-                            <td>U20</td>
-                            <td>
-                                <div class="row-actions">
-                                    <button class="action-btn" data-transfer-id="tr_8hIjKl0mnOpQrStUvWxYzAbCdEfG">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </button>
-                                    <div class="action-menu" data-transfer-id="tr_8hIjKl0mnOpQrStUvWxYzAbCdEfG">
-                                        <div class="menu-item" data-action="return-transfer">
-                                            <i class="fas fa-undo"></i>
-                                            Return transfer
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                    <tbody id="transfers-table-body">
+                        <!-- Table rows will be populated dynamically -->
                     </tbody>
                 </table>
             </div>
@@ -329,17 +162,25 @@
         <!-- Transfer Detail View -->
         <div id="transfer-detail-view" style="display: none;">
             <div class="detail-header">
-                <div class="detail-nav">
-                    <a href="#" class="back-link">
-                        <i class="fas fa-chevron-left"></i>
-                        See all transfers
-                    </a>
-                    <span class="fintoc-logo">fintoc</span>
+                <div class="detail-header-left">
+                    <div class="detail-nav">
+                        <a href="#" class="back-link">
+                            <i class="fas fa-chevron-left"></i>
+                            See all transfers
+                        </a>
+                        <span class="fintoc-logo">fintoc</span>
+                    </div>
+                    <div class="transfer-id">
+                        <span>Fintoc ID: tr_30VqOs1btBHcwJsru5XW3Woe5GK</span>
+                        <button class="copy-btn" data-clipboard-text="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="transfer-id">
-                    <span>Fintoc ID: tr_30VqOs1btBHcwJsru5XW3Woe5GK</span>
-                    <button class="copy-btn" data-clipboard-text="tr_30VqOs1btBHcwJsru5XW3Woe5GK">
-                        <i class="fas fa-copy"></i>
+                <div class="detail-actions">
+                    <button class="btn-return" id="detail-return-btn" style="display: none;">
+                        <i class="fas fa-undo"></i>
+                        Return Transfer
                     </button>
                 </div>
             </div>
@@ -497,95 +338,113 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM loaded, initializing functionality...');
             
-            // Test if elements exist
-            const testTransfersListView = document.getElementById('transfers-list-view');
-            const testTransferDetailView = document.getElementById('transfer-detail-view');
-            const testTableBody = document.querySelector('.table tbody');
-            const testTransferRows = document.querySelectorAll('.transfer-row');
+            // Initialize the application
+            initializeApp();
             
-            console.log('Elements found:', {
-                transfersListView: !!testTransfersListView,
-                transferDetailView: !!testTransferDetailView,
-                tableBody: !!testTableBody,
-                transferRows: testTransferRows.length
-            });
-            // Navigation item click handlers
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Remove active class from all items
-                    navItems.forEach(nav => nav.classList.remove('active'));
-                    // Add active class to clicked item
-                    this.classList.add('active');
-                });
-            });
-
-            // Filter button click handlers
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Add visual feedback
-                    this.style.background = '#e3f2fd';
-                    setTimeout(() => {
-                        this.style.background = '';
-                    }, 200);
-                });
-            });
-
-            // Toggle switch functionality
-            const toggleSwitch = document.querySelector('.toggle-switch');
-            toggleSwitch.addEventListener('click', function() {
-                this.classList.toggle('active');
-                if (this.classList.contains('active')) {
-                    this.style.background = 'var(--orange-600)';
-                    this.style.setProperty('--toggle-position', 'right: 2px');
-                } else {
-                    this.style.background = 'var(--mint-600)';
-                    this.style.setProperty('--toggle-position', 'left: 2px');
-                }
-            });
-
-            // Table row hover effects (only for non-transfer rows)
-            const tableRows = document.querySelectorAll('.table tbody tr:not(.transfer-row)');
-            tableRows.forEach(row => {
-                row.addEventListener('mouseenter', function() {
-                    this.style.backgroundColor = '#f8f9fa';
-                });
-                row.addEventListener('mouseleave', function() {
-                    this.style.backgroundColor = '';
-                });
-            });
-
-            // Header buttons functionality (only if they exist)
-            const simulateBtn = document.querySelector('.btn:not(.btn-primary)');
-            const transferBtn = document.querySelector('.btn-primary');
-
-            if (simulateBtn) {
-                simulateBtn.addEventListener('click', function() {
-                    alert('Simulate functionality would be implemented here');
+            function initializeApp() {
+                // Populate totals
+                updateTotals();
+                
+                // Populate table
+                populateTable();
+                
+                // Initialize event listeners
+                initializeEventListeners();
+            }
+            
+            function updateTotals() {
+                const { totalInbound, totalOutbound } = calculateTotals();
+                document.getElementById('total-inbound').textContent = formatAmount(totalInbound);
+                document.getElementById('total-outbound').textContent = formatAmount(totalOutbound);
+            }
+            
+            function populateTable() {
+                const tableBody = document.getElementById('transfers-table-body');
+                tableBody.innerHTML = '';
+                
+                mockTransfers.forEach(transfer => {
+                    const row = createTransferRow(transfer);
+                    tableBody.appendChild(row);
                 });
             }
-
-            if (transferBtn) {
-                transferBtn.addEventListener('click', function() {
-                    alert('Transfer functionality would be implemented here');
+            
+            function createTransferRow(transfer) {
+                const row = document.createElement('tr');
+                row.className = 'transfer-row';
+                row.setAttribute('data-transfer-id', transfer.id);
+                
+                const statusBadge = getStatusBadge(transfer.status);
+                const canReturn = canReturnTransfer(transfer.status);
+                
+                row.innerHTML = `
+                    <td>${formatDate(transfer.date)}</td>
+                    <td>${transfer.from.name}</td>
+                    <td>${transfer.concept}</td>
+                    <td>
+                        ${statusBadge.text ? `
+                            <span class="status-badge ${statusBadge.class}">
+                                <i class="${statusBadge.icon}"></i>
+                                ${statusBadge.text}
+                            </span>
+                        ` : ''}
+                        <span class="${transfer.amount > 0 ? 'amount-positive' : 'amount-negative'}">
+                            ${transfer.amount > 0 ? '' : '- '}${formatAmount(transfer.amount)}
+                        </span>
+                    </td>
+                    <td>${transfer.user}</td>
+                    <td>
+                        ${canReturn ? `
+                            <div class="row-actions">
+                                <button class="action-btn" data-transfer-id="${transfer.id}">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="action-menu" data-transfer-id="${transfer.id}">
+                                    <div class="menu-item" data-action="return-transfer">
+                                        <i class="fas fa-undo"></i>
+                                        Return transfer
+                                    </div>
+                                </div>
+                            </div>
+                        ` : ''}
+                    </td>
+                `;
+                
+                return row;
+            }
+            
+            function initializeEventListeners() {
+                // Navigation item click handlers
+                const navItems = document.querySelectorAll('.nav-item');
+                navItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        navItems.forEach(nav => nav.classList.remove('active'));
+                        this.classList.add('active');
+                    });
                 });
-            }
 
-            // Add smooth scrolling to main content
-            const mainContent = document.querySelector('.main-content');
-            if (mainContent) {
-                mainContent.style.scrollBehavior = 'smooth';
-            }
+                // Filter button click handlers
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        this.style.background = '#e3f2fd';
+                        setTimeout(() => {
+                            this.style.background = '';
+                        }, 200);
+                    });
+                });
 
-            // Add loading animation for balance
-            const balanceAmount = document.querySelector('.balance-amount');
-            if (balanceAmount) {
-                balanceAmount.style.opacity = '0';
-                setTimeout(() => {
-                    balanceAmount.style.transition = 'opacity 0.5s ease-in';
-                    balanceAmount.style.opacity = '1';
-                }, 300);
+                // Toggle switch functionality
+                const toggleSwitch = document.querySelector('.toggle-switch');
+                toggleSwitch.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    if (this.classList.contains('active')) {
+                        this.style.background = 'var(--orange-600)';
+                        this.style.setProperty('--toggle-position', 'right: 2px');
+                    } else {
+                        this.style.background = 'var(--mint-600)';
+                        this.style.setProperty('--toggle-position', 'left: 2px');
+                    }
+                });
             }
 
             // Transfer detail view functionality
@@ -594,7 +453,7 @@
             const backLink = document.querySelector('.back-link');
 
             // Use event delegation for better reliability
-            const tableBody = document.querySelector('.table tbody');
+            const tableBody = document.getElementById('transfers-table-body');
             if (tableBody) {
                 console.log('Adding click listener to table body');
                 tableBody.addEventListener('click', function(e) {
@@ -660,19 +519,158 @@
             });
 
             function showTransferDetail(transferId) {
+                const transfer = mockTransfers.find(t => t.id === transferId);
+                if (!transfer) return;
+                
                 transfersListView.style.display = 'none';
                 transferDetailView.style.display = 'block';
                 
-                // Update transfer ID in detail view
-                const transferIdElements = transferDetailView.querySelectorAll('[data-clipboard-text]');
-                transferIdElements.forEach(element => {
-                    if (element.getAttribute('data-clipboard-text') === transferId) {
-                        const parentSpan = element.closest('.transfer-id span');
-                        if (parentSpan) {
-                            parentSpan.textContent = `Fintoc ID: ${transferId}`;
-                        }
-                    }
+                // Update transfer details
+                updateTransferDetailView(transfer);
+            }
+            
+            function updateTransferDetailView(transfer) {
+                // Update transfer ID
+                const transferIdSpan = transferDetailView.querySelector('.transfer-id span');
+                if (transferIdSpan) {
+                    transferIdSpan.textContent = `Fintoc ID: ${transfer.id}`;
+                }
+                
+                // Update transfer summary
+                const transferTitle = transferDetailView.querySelector('.transfer-title');
+                if (transferTitle) {
+                    transferTitle.textContent = transfer.amount > 0 ? 'Inbound transfer' : 'Outbound transfer';
+                }
+                
+                const transferAmount = transferDetailView.querySelector('.transfer-amount');
+                if (transferAmount) {
+                    transferAmount.textContent = formatAmount(transfer.amount) + ' MXN';
+                }
+                
+                const transferTimestamp = transferDetailView.querySelector('.transfer-timestamp');
+                if (transferTimestamp) {
+                    transferTimestamp.textContent = `Created at ${formatDate(transfer.date)}`;
+                }
+                
+                // Update status badge
+                const statusBadge = transferDetailView.querySelector('.transfer-amount-section .status-badge');
+                const statusConfig = getStatusForDetailView(transfer.status);
+                if (statusBadge) {
+                    statusBadge.className = `status-badge ${statusConfig.class}`;
+                    statusBadge.innerHTML = `<i class="${statusConfig.icon}"></i>${statusConfig.text}`;
+                }
+                
+                // Update from/to sections
+                updateAccountSection('from', transfer.from);
+                updateAccountSection('to', transfer.to);
+                
+                // Update details section
+                updateDetailsSection(transfer);
+                
+                // Update timeline
+                updateTimelineSection(transfer);
+                
+                // Update metadata
+                updateMetadataSection(transfer);
+                
+                // Update return button visibility and functionality
+                updateReturnButton(transfer);
+            }
+            
+            function updateAccountSection(type, account) {
+                const section = transferDetailView.querySelector(`.${type}-section`);
+                if (!section) return;
+                
+                const accountName = section.querySelector('.account-name');
+                if (accountName) {
+                    accountName.textContent = account.name;
+                }
+                
+                const rfcValue = section.querySelector('.detail-row:nth-child(1) .detail-value');
+                if (rfcValue) {
+                    rfcValue.textContent = account.rfc;
+                }
+                
+                const institutionValue = section.querySelector('.detail-row:nth-child(2) .detail-value');
+                if (institutionValue) {
+                    institutionValue.textContent = account.institution;
+                }
+                
+                const clabeValue = section.querySelector('.detail-row:nth-child(3) .detail-value');
+                if (clabeValue) {
+                    clabeValue.textContent = account.clabe;
+                }
+            }
+            
+            function updateDetailsSection(transfer) {
+                const detailsCard = transferDetailView.querySelector('.details-card');
+                if (!detailsCard) return;
+                
+                const fintocIdValue = detailsCard.querySelector('.detail-row:nth-child(1) .detail-value');
+                if (fintocIdValue) {
+                    fintocIdValue.textContent = transfer.id;
+                }
+                
+                const trackingKeyValue = detailsCard.querySelector('.detail-row:nth-child(2) .detail-value');
+                if (trackingKeyValue) {
+                    trackingKeyValue.textContent = transfer.trackingKey;
+                }
+                
+                const referenceNumberValue = detailsCard.querySelector('.detail-row:nth-child(3) .detail-value');
+                if (referenceNumberValue) {
+                    referenceNumberValue.textContent = transfer.referenceNumber;
+                }
+            }
+            
+            function updateTimelineSection(transfer) {
+                const timelineCard = transferDetailView.querySelector('.timeline-card');
+                if (!timelineCard) return;
+                
+                timelineCard.innerHTML = '';
+                transfer.timeline.forEach(item => {
+                    const timelineItem = document.createElement('div');
+                    timelineItem.className = 'timeline-item';
+                    timelineItem.innerHTML = `
+                        <i class="fas fa-undo timeline-icon"></i>
+                        <div class="timeline-content">
+                            <div class="timeline-text">${item.action}</div>
+                            <div class="timeline-date">${formatDate(item.date)}</div>
+                        </div>
+                    `;
+                    timelineCard.appendChild(timelineItem);
                 });
+            }
+            
+            function updateMetadataSection(transfer) {
+                const metadataCard = transferDetailView.querySelector('.metadata-card');
+                if (!metadataCard) return;
+                
+                const userValue = metadataCard.querySelector('.detail-value');
+                if (userValue) {
+                    userValue.textContent = transfer.metadata.user;
+                }
+            }
+            
+            function updateReturnButton(transfer) {
+                const returnBtn = document.getElementById('detail-return-btn');
+                if (!returnBtn) return;
+                
+                const canReturn = canReturnTransfer(transfer.status);
+                
+                if (canReturn) {
+                    returnBtn.style.display = 'flex';
+                    returnBtn.disabled = false;
+                    
+                    // Remove any existing event listeners and add new one
+                    returnBtn.replaceWith(returnBtn.cloneNode(true));
+                    const newReturnBtn = document.getElementById('detail-return-btn');
+                    
+                    newReturnBtn.addEventListener('click', function() {
+                        showMFAModal(transfer.id);
+                    });
+                } else {
+                    returnBtn.style.display = 'none';
+                }
             }
 
             function showTransfersList() {
@@ -719,7 +717,7 @@
             let currentTransferId = null;
             let menuJustClosed = false;
 
-            // Action button click handlers
+            // Action button click handlers (using event delegation)
             document.addEventListener('click', function(e) {
                 const actionBtn = e.target.closest('.action-btn');
                 if (actionBtn) {

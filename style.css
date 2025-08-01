@@ -294,11 +294,36 @@ body {
     margin-bottom: 8px;
 }
 
-.balance-amount {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--mint-600);
+.balance-amounts {
+    display: flex;
+    gap: 24px;
     margin-bottom: 8px;
+}
+
+.balance-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.balance-type {
+    font-size: 14px;
+    color: var(--grey-600);
+    font-weight: 500;
+}
+
+.balance-amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--grey-1000);
+}
+
+.balance-amount.positive {
+    color: var(--mint-600);
+}
+
+.balance-amount.negative {
+    color: var(--red-600);
 }
 
 .balance-info {
@@ -422,6 +447,18 @@ body.menu-open .table tr:hover {
     color: var(--yellow-700);
 }
 
+.status-pending {
+    background: var(--yellow-100);
+    color: var(--yellow-800);
+    border: 1px solid var(--yellow-500);
+}
+
+.status-succeeded {
+    background: var(--mint-100);
+    color: var(--mint-700);
+    border: 1px solid var(--mint-400);
+}
+
 /* Font Awesome Icons */
 .nav-icon i,
 .btn i,
@@ -462,6 +499,18 @@ body.menu-open .table tr:hover {
 
 .detail-header {
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.detail-header-left {
+    flex: 1;
+}
+
+.detail-actions {
+    flex-shrink: 0;
 }
 
 .detail-nav {
@@ -538,6 +587,35 @@ body.menu-open .table tr:hover {
 .transfer-timestamp {
     font-size: 14px;
     color: var(--grey-500);
+}
+
+.transfer-actions {
+    margin-top: 16px;
+}
+
+.btn-return {
+    background: var(--orange-600);
+    color: var(--grey-0);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-return:hover {
+    background: var(--orange-700);
+}
+
+.btn-return:disabled {
+    background: var(--grey-300);
+    color: var(--grey-500);
+    cursor: not-allowed;
 }
 
 .transfer-details-grid {
