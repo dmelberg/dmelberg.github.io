@@ -18,7 +18,7 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "dmelberg/rafa-bio",
+    "data-repo": "dmelberg/dmelberg.github.io",
     "data-repo-id": "",
     "data-category": "Comments",
     "data-category-id": "",
