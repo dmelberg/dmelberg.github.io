@@ -1,7 +1,7 @@
 cv:
   name: "Rafael Elberg"
   label: "Incoming PhD Student in Computer Science"
-  email: ""
+  email: "rtelberg@uc.cl"
   location: "Santiago, Chile"
   image: ""
   summary: "Incoming PhD student in the Department of Computer Science at the University of Toronto. Holds a Master's degree from the Pontificia Universidad Católica de Chile (PUC Chile). Born in Santiago, Chile, and grew up in Boston and Madrid before returning to Chile. Research focuses on self-supervised representation learning, compositional generalization, and computer vision."
@@ -29,7 +29,7 @@ cv:
         area: "Computer Science"
         studyType: "PhD"
         start_date: "2026"
-        end_date: ""
+        end_date: "present"
         score: ""
         courses: ""
         highlights:
@@ -58,15 +58,15 @@ cv:
         position: "Instructor"
         location: "Santiago, Chile"
         start_date: "2026"
-        end_date: ""
+        end_date: "present"
         summary: "Teaching the discrete mathematics IIC1253 course during the first semester of 2026."
         highlights: []
 
       - company: "National Center for Artificial Intelligence (CENIA)"
         position: "Master's Student"
         location: "Macul, Chile"
-        start_date: ""
-        end_date: ""
+        start_date: "2023"
+        end_date: "2025"
         summary: "Collaborated on research related to artificial intelligence."
         highlights: []
 
@@ -83,8 +83,7 @@ cv:
         authors:
           - "R Elberg, D Parra, M Petrache"
         publisher: "arXiv preprint arXiv:2405.01705"
-        releaseDate: "2024"
-        url: ""
+        releaseDate: "2024" # add url below
         summary: "Cited by 5."
 
       - title: "A Compressive-Expressive Communication Framework for Compositional Representations"
@@ -92,7 +91,6 @@ cv:
           - "R Elberg, F del Rio, M Petrache, D Parra"
         publisher: "arXiv preprint arXiv:2501.19182"
         releaseDate: "2025"
-        url: ""
         summary: ""
 
       - title: "ihealth-chile-1 at rrg24: In-context learning and finetuning of a large multimodal model for radiology report generation"
@@ -100,7 +98,6 @@ cv:
           - "D Campanini, O Loch, P Messina, R Elberg, D Parra"
         publisher: "Proceedings of the 23rd Workshop on Biomedical Natural Language Processing"
         releaseDate: "2024"
-        url: ""
         summary: "Cited by 2."
 
     Skills:
@@ -124,18 +121,12 @@ cv:
         summary: "Official implementation for Long Tail Image Generation Through Feature Space Augmentation and Iterated Learning."
         highlights:
           - "Written in Python."
-        start_date: ""
-        end_date: ""
 
       - name: "CreativAI-UC/Tutoriales"
         summary: "Tutoriales para creación de redes neuronales y manejo musical."
         highlights:
           - "Includes Jupyter Notebook resources."
-        start_date: ""
-        end_date: ""
 
       - name: "IIC2613-Inteligencia-Artificial-2022-1/Syllabus"
         summary: "Repositorio base del curso, donde se publicarán enunciados, ayudantías y se resolverán dudas."
         highlights: []
-        start_date: ""
-        end_date: ""
