@@ -40,10 +40,18 @@ cv:
         location: "Santiago, Chile"
         area: "Computer Science"
         studyType: "Master's Degree"
-        start_date: ""
-        end_date: ""
+        start_date: "2023"
+        end_date: "2025"
         highlights:
           - "Affiliated with the National Center for Artificial Intelligence (CENIA)."
+      
+      - institution: "Pontificia Universidad Católica de Chile"
+        location: "Santiago, Chile"
+        area: "Computer Science"
+        studyType: "Bachelor's Degree"
+        start_date: "2018"
+        end_date: "2023"
+        highlights: []
 
     Experience:
       - company: "Pontificia Universidad Católica de Chile (PUC)"
@@ -55,11 +63,19 @@ cv:
         highlights: []
 
       - company: "National Center for Artificial Intelligence (CENIA)"
-        position: "Estudiante de magíster"
+        position: "Master's Student"
         location: "Macul, Chile"
         start_date: ""
         end_date: ""
         summary: "Collaborated on research related to artificial intelligence."
+        highlights: []
+
+      - company: "Pontificia Universidad Católica de Chile (PUC)"
+        position: "Teaching Assistant"
+        location: "Santiago, Chile"
+        start_date: "2020"
+        end_date: "2025"
+        summary: "Teaching assistant for the Artificial Intelligence, Deep Learning Computer Architecture and Advanced Programming courses."
         highlights: []
 
     Publications:
