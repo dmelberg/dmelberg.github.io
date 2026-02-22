@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - SugarFreeManatee
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - SugarFreeManatee/Proyecto_recsys
+  - SugarFreeManatee/CELEBI
+  - SugarFreeManatee/Feature-Space-Augmentation-and-Iterated-Learning
+  - SugarFreeManatee/ActividadThreading
+  - SugarFreeManatee/AVA
