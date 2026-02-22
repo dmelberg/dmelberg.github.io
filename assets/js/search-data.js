@@ -459,9 +459,9 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "teachings-discreet-mathematics",
-          title: 'Discreet Mathematics',
-          description: "",
+            },},{id: "teachings-discrete-mathematics",
+          title: 'Discrete Mathematics',
+          description: "This course teaches the elements that allow formalizing statements of various engineering problems using concepts of discrete mathematics (sets, relations, functions, induction, etc.) and modeling this type of problems with these elements; additionally, graph theory is taught to represent and solve some of these types of problems, along with the formal methodology of algorithm analysis and computational complexity.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/discreet-mathematics/";
             },},{
