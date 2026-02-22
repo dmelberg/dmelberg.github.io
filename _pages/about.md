@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Proffessor at PUC Chile. PhD Student University of Toronto.
 
 profile:
   align: right
