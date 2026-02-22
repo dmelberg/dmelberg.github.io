@@ -440,16 +440,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_hellbound_heart/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-i-got-awarded-with-honorable-mention-for-best-research-of-2025-in-the-annual-cenia-event-for-my-paper-in-neurips-2025",
+          title: 'I got awarded with Honorable Mention for Best Research of 2025 in the...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-i-will-be-teaching-discrete-mathematics-at-puc-this-semester-smile",
+          title: 'I will be teaching Discrete Mathematics at PUC this semester! :smile:',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-will-officially-be-starting-my-phd-next-fall-in-the-cs-department-at-university-of-toronto-maple-leaf",
+          title: 'Will officially be starting my PhD next fall in the CS department at...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
