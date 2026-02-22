@@ -7,11 +7,10 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Santiago, Chile</p>
+    <p>rtelberg [at] uc.cl</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +26,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am an incoming PhD student in the Department of Computer Science at the University of Toronto. I will be supervised by Professor Sheila McIlraith. Prior to this, I was a Master's student at the Pontificia Universidad Católica de Chile (PUC Chile), affiliated with the National Center for Artificial Intelligence (CENIA).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My interests mainly lie at the intersection of computer vision and deep learning. This includes self-supervised representation learning, compositional generalization, and frameworks for long-tail image generation. I am particularly interested in building AI systems that can effectively understand complex, compositional structures. You may find my list of publications here.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I was born in Santiago, Chile. I grew up in Boston, MA, and Madrid, before finally coming back to Chile to finish my schooling. Prior to my PhD, I attended PUC Chile, where I obtained my Master's degree.
+
+Aside from my research, I will be teaching the discrete mathematics IIC1253 course at PUC during the first semester of 2026. I also actively contribute to educational open-source projects, such as creating syllabus materials for the university-level Artificial Intelligence course IIC2613.
