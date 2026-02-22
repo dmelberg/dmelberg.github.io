@@ -8,7 +8,7 @@ term: First Semester
 location: PUC Campus
 time: Mondays and Wednesdays, 9:40-11:00 AM
 course_id: IIC1253
-schedule: []
+---
 
 ## Course Overview
 
