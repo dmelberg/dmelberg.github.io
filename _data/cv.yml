@@ -116,6 +116,9 @@ cv:
       - name: "English"
         summary: "Fluent (Grew up in Boston, MA)"
 
+      - name: "Portuguese"
+        summary: "Fluent (Raised by a Brazilian mom)"
+
     Projects:
       - name: "Feature-Space-Augmentation-and-Iterated-Learning"
         summary: "Official implementation for Long Tail Image Generation Through Feature Space Augmentation and Iterated Learning."
