@@ -10,6 +10,6 @@ calendar: true
 
 This page displays a collection of courses with detailed schedules, materials, and resources.
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='America/Santiago' %}
+{% comment %}{% include calendar.liquid calendar_id='test@gmail.com' timezone='America/Santiago' %}{% endcomment %}
 
 {% include courses.liquid %}
