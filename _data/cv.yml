@@ -44,7 +44,7 @@ cv:
         end_date: "2025"
         highlights:
           - "Affiliated with the National Center for Artificial Intelligence (CENIA)."
-      
+
       - institution: "Pontificia Universidad Católica de Chile"
         location: "Santiago, Chile"
         area: "Computer Science"
